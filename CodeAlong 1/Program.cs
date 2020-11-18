@@ -6,7 +6,7 @@ namespace CodeAlong_1
     class Program
     {
         static void Main(string[] args)
-        {
+        {/*
             // CTRL + k, CTRL + d för att fina till koden
             // Ett sätt
             int[] arrayOfNumbers = new int[5];
@@ -33,8 +33,39 @@ namespace CodeAlong_1
             }
 
             Console.WriteLine(arrayOfNumbers.Contains(3));
-
             
+
+
+            //Öning 2
+            // Ett sätt
+            int[] firstOne = new int[10] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            int[] secondOne = new int[10] { 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 };
+
+            Console.WriteLine(string.Join('.', firstOne));
+            Console.WriteLine(string.Join(',', secondOne));
+
+            // Ett annat sätt
+            Console.WriteLine(string.Join(',', firstOne));
+            */
+            string[] stringArray = new string[] { "January", "Februari", "Mars", "April", "Maj", "Juni", "Juli", "Augusti", "September", "Oktober", "November", "December" };
+            string number;
+            int choice;
+
+            do
+            {
+
+                Console.WriteLine("Select a number from 1-12");
+                number = Console.ReadLine();
+                choice = Convert.ToInt32(number);
+                if (choice < 12)
+                {
+                    Console.WriteLine(stringArray[choice - 1]);
+                }
+
+            } while (choice < 12);
+         
+
+
         }
     }
 }
